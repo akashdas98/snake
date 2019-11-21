@@ -192,17 +192,22 @@ const Fruit = makeFruit();
             fired = false;
         }, 120);
     }
+    function handleClick(e) {
+        if(fired) {
+            setTimeout(() => {
+                handleClick(e);
+            }, 1);
+            return;
+        };
+        fired = true;
+        Snake.changeDirection(e.target.id);
+        setTimeout(() => {
+            fired = false;
+        }, 120);
+    }
     window.addEventListener('keydown', handleKeyDown);
-    Up.addEventListener('click', () => {
-        Snake.changeDirection('Up');
-    });
-    Down.addEventListener('click', () => {
-        Snake.changeDirection('Down');
-    });
-    Left.addEventListener('click', () => {
-        Snake.changeDirection('Left');
-    });
-    Right.addEventListener('click', () => {
-        Snake.changeDirection('Right');
-    });
+    Up.addEventListener('click', handleClick);
+    Down.addEventListener('click', handleClick);
+    Left.addEventListener('click', handleClick);
+    Right.addEventListener('click', handleClick);
 }());
