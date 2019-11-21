@@ -177,7 +177,7 @@ const Fruit = makeFruit();
         Snake.update();
         Snake.eating();
         Snake.collide(interval);
-    }, 100);
+    }, 120);
     let fired = false;
     function handleKeyDown(e) {
         if(fired) {
@@ -190,7 +190,7 @@ const Fruit = makeFruit();
         Snake.changeDirection(e.key.replace('Arrow', ''));
         setTimeout(() => {
             fired = false;
-        }, 100);
+        }, 120);
     }
     window.addEventListener('keydown', handleKeyDown);
     Up.addEventListener('click', () => {
