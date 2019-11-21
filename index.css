@@ -1,3 +1,33 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    touch-action: manipulation;
+}
+
+#container {
+    width: 500px;
+}
+
 canvas {
     background: #cfcfcf;
+}
+
+#buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    margin: 3px 0;
+    padding: 10px;
+}
+
+#Up {
+    padding: 10px 18px;
+}
+
+#Left {
+    padding: 10px 15px;
 }
