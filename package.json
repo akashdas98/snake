@@ -1,0 +1,25 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "Snake game.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode development",
+    "build": "webpack --progress --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashdas98/snake.git"
+  },
+  "author": "Akash Das, Natabar Baskey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akashdas98/snake/issues"
+  },
+  "homepage": "https://github.com/akashdas98/snake#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
+}
