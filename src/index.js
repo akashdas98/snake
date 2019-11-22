@@ -16,13 +16,18 @@ const columns = canvas.width / scale;
 function makeFruit() {
     function getRandomPos(arr, checkX) {
         let rand = (Math.floor(Math.random() * rows - 1) + 1) * scale;
-        if (
-            arguments.length > 0 
-            && arr.filter((cell) => cell.x).includes(checkX) 
-            && arr.filter((cell) => cell.y).includes(rand)
-        ) {
-            rand = getRandomPos(arr, checkX);
-            return rand;
+        if (arguments.length > 0) {
+            let match = false;
+            for(let i = 0; i < arr.length; i++) {
+                if(arr[i].x == checkX && arr[i].y == rand) {
+                    match = true;
+                    break;
+                }
+            }
+            if(match) {
+                rand = getRandomPos(arr, checkX);
+                return rand;
+            }
         }
         return rand;
     }
