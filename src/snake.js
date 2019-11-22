@@ -44,7 +44,6 @@ function makeSnake() {
             head.y = canvas.height;
         
         this.body = [head, ...body];
-
     }
     
     function changeDirection(direction) {
